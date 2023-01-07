@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<nav>
+    <a href=""> Home</a>
+    <a href="game/"> New Game</a>
+    <a href="add/">  Add player</a>
+</nav>
+<div class="headdiv">
+<h1> Welcome to badminaton rating calculator</h1>
+</div>
+
+<div class="divtb">
+<h1> Score Board</h1>
+<table>
+    <tr></tr>
+    <th>Rank</th>
+    <th>Player</th>
+    <th>Rating</th>
+    <th>Games Played</th>
+    <th>Games won</th>
+    <th>Games lost</th>
+   
+    {% for player in table %}    
+    <tr></tr>
+    <td>{{forloop.counter}}</td>
+    <td>{{player.Name}}</td>
+    <td>{{player.Rating}}  </td>
+    <td>{{player.G_played}}</td>
+    <td>{{player.G_won}}</td>
+    <td>{{player.G_lost}}</td>
+
+    {% endfor %}
+</div>
+<div>
+
+{% load static%}
+<script src="{% static 'java.js' %}"></script>
+</body>
+</html>
+
