@@ -1,0 +1,7 @@
+Install djanngo
+pip install Django
+
+in the project directory
+run
+python manage.py makemigraions
+python manage.py runserver
